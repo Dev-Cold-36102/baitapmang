@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tu dien</title>
+</head>
+<body>
+<h1 style="color: blueviolet">tra cuu</h1>
+chung toi co cac tu sau:
+<div id="out_id"></div>
+<br/>
+nhap tu can tra:
+<button type="button" onclick="enter()">enter</button>
+
+<script>
+    let eng = ["i", "love", "you", "home", "codegym"];
+    let viet = ["tôi", "yêu", "bạn", "nhà", "một nơi tuyệt vời"];
+    let i;
+    document.getElementById("out_id").innerHTML = eng;
+
+    function enter() {
+        let word = prompt("nhap tu can tra:");
+        for (i = 0; i < eng.length - 1; i++) {
+            if (eng[i] === word) {
+                alert("tu do co nghia la:" + viet[i]);
+                return;
+            }
+        }
+        if (eng[eng.length - 1] === word) {
+            alert("tu do co nghia la:" + viet[i]);
+        } else {
+            alert("tu do khong co trong tu dien");
+        }
+
+    }
+</script>
+
+</body>
+</html>
